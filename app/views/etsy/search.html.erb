@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Etsy</title>
+  </head>
+  <body bgcolor="#F5F5F1" >
+    <header bgcolor="#FFFFFF">
+      <div class="search">
+
+      </div>
+    </header>
+
+    <div class="sidebar" style = "position:relative">
+
+        <li>Beef</li>
+        <li>Beef</li>
+        <li>Beef</li>
+        <li>Beef</li>
+        <li>Beef</li>
+        <li>Beef</li>
+        <li>Beef</li>
+
+    </div>
+    <% if @results %>
+      <% @results.each do %>
+    <ol>
+      <div class="box">
+        <li>
+          <%= @results do %>
+          <%= Etsy::Image.get(@results) %>
+          <% end %>
+
+        </li>
+      </div>
+    </ol>
+    <% end %>
+  <% end %>
+
+
+  </body>
+</html>

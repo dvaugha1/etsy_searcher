@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+.sidebar{
+  background-color: white;
+  width: 224px;
+  margin-right: 28px;
+  float: left;
+  color: #1692B3;
+  list-style: none;
+}
+
+.box{
+  width: 224px;
+  margin-right: 28px;
+  float: left;
+  list-style: none
+}
