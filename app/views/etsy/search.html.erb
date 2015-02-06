@@ -27,10 +27,21 @@
   <ol>
     <div class="box">
       <li>
-        <img src=<%= l["Images"][0]["url_170x135"] %>>
-        <%= l.find ["Price"]  %>
-        Title
 
+        <div class="image">
+          <img src=<%= l["Images"][0]["url_170x135"] %>>
+        </div>
+        <div class="price">
+          <%= l["price"]  %>
+        </div>
+
+        <div class="name">
+          <%= l["title"] %>
+        </div>
+
+      <!--   <div class = "shop">
+        <%= l["Shop"] %>
+      </div> -->
 
       </li>
     </div>
