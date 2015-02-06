@@ -1,9 +1,11 @@
 class EtsyController < ApplicationController
   def search
     if params[:q]
-      response = Etsy::Request.get('/listings/active', :include => ['Images','Shop'], :keywords => params[:q])
+      response = Etsy::Request.get('/listings/active',
+                              :includes => ['Images','Shops'],
+                              :keywords => params[:q])
       @results = JSON.parse(response.body)['results']
+      end
+      render :search
     end
-    render :search
-  end
 end

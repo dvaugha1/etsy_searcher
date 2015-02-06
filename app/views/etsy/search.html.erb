@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Etsy</title>
-  </head>
-  <body bgcolor="#F5F5F1" >
-    <header bgcolor="#FFFFFF">
-      <div class="search">
-
-      </div>
-    </header>
-
-    <div class="sidebar" style = "position:relative">
-
-        <li>Beef</li>
-        <li>Beef</li>
-        <li>Beef</li>
-        <li>Beef</li>
-        <li>Beef</li>
-        <li>Beef</li>
-        <li>Beef</li>
+<head>
+  <title>Etsy</title>
+</head>
+<body bgcolor="#F5F5F1" >
+  <header bgcolor="#FFFFFF">
+    <div class="search">
 
     </div>
-    <% if @results %>
-      <% @results.each do %>
-    <ol>
-      <div class="box">
-        <li>
-          <%= @results do %>
-          <%= Etsy::Image.get(@results) %>
-          <% end %>
+  </header>
 
-        </li>
-      </div>
-    </ol>
-    <% end %>
+  <div class="sidebar" style = "position:relative">
+
+    <li>Beef</li>
+    <li>Beef</li>
+    <li>Beef</li>
+    <li>Beef</li>
+    <li>Beef</li>
+    <li>Beef</li>
+    <li>Beef</li>
+
+  </div>
+  <% if @results %>
+  <% @results.each do |l| %>
+  <ol>
+    <div class="box">
+      <li>
+        <img src=<%= l["Images"][0]["url_170x135"] %>>
+        <%= l.find ["Price"]  %>
+        Title
+
+
+      </li>
+    </div>
+  </ol>
+  <% end %>
   <% end %>
 
 
-  </body>
+</body>
 </html>
