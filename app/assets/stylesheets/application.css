@@ -70,6 +70,16 @@
   background: -webkit-linear-gradient(top, #FFFFFF 20%, #E9E9E8);
 }
 
+.bottom-choices{
+  font-family: arial, helvetica, sans-serif;
+}
+
+.list-head{
+  color: #0192B5;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
 .result-list{
   width: 980px;
   height: 3808px;
