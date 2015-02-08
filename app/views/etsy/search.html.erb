@@ -11,17 +11,35 @@
     </div>
   </header>
 
-  <div class="sidebar" style = "position:relative">
+  <div class="left">
+    <div class = "left-head">
+     <h3> Show results for: </h3>
+    </div>
 
-    <li>Beef</li>
-    <li>Beef</li>
-    <li>Beef</li>
-    <li>Beef</li>
-    <li>Beef</li>
-    <li>Beef</li>
-    <li>Beef</li>
+    <div class="sidebar" style = "position:relative">
+      <div class="sidebar-top">
+        <div class="sidebar-top-header">
+          <h4> Item Type </h4>
+        </div>
 
+        <div class="sidebar-choices">
+          <li><span class="side-button"> </span> All Items</li>
+          <li><span class="side-button"> </span> Handmade</li>
+          <li><span class="side-button"> </span> Vintage</li>
+          <li><span class="side-button"> </span> Craft Supplies</li>
+        </div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-top-header">
+          <h4> Categories </h4>
+        </div>
+
+      </div>
+
+    </div>
   </div>
+  <div class="result-list">
   <% if @results %>
   <% @results.each do |l| %>
   <ol>
@@ -29,26 +47,30 @@
       <li>
 
         <div class="image">
-          <img src=<%= l["Images"][0]["url_170x135"] %>>
-        </div>
-        <div class="price">
-          <%= l["price"]  %>
+          <img style= "height: 170px; width: 214px;" src=<%= l["Images"][0]["url_170x135"] %>>
         </div>
 
         <div class="name">
           <%= l["title"] %>
         </div>
 
-      <!--   <div class = "shop">
-        <%= l["Shop"] %>
-      </div> -->
+
+        <div class="price">
+          <span class= "currency-sym"> $ </span>
+          <span class= "amount"> <%= l["price"]  %> </span>
+          <span class= "currency-code"> USD </span>
+        </div>
+
+        <div class = "shop">
+          <%= l["Shop"] %>
+        </div>
 
       </li>
     </div>
   </ol>
   <% end %>
   <% end %>
-
+</div>
 
 </body>
 </html>
