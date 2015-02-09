@@ -59,6 +59,24 @@
    font-size: 15px;
    font-weight: bold;
  }
+
+.browse-menu{
+  margin-left: 480px;
+  margin-top: -34px;
+}
+
+ .browse-button{
+   font-family: arial, helvetica, sans-serif;
+   font-size: 15px;
+   font-weight: bold;
+   color: #666666;
+   width: 78.25px;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 7px;
+   padding-bottom: 8px;
+   border: 1px solid #C0C0C0;
+ }
 .left{
   position: relative;
   padding-top: 25px;
